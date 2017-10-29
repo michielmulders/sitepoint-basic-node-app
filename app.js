@@ -3,10 +3,6 @@ const express = require('express')
 const app = express()
 var port = process.env.PORT || 3005
 
-/* Mongoose Setup */
-var mongoose = require('mongoose')
-mongoose.connect("mongodb://username:password@host:port/database-name")
-
 /* bodyParser */
 var bodyParser = require('body-parser')
 app.use(bodyParser.json())
@@ -39,5 +35,5 @@ app.use(function (req, res, next) {
 
 /* Serve API */
 app.listen(port, function () {
-  console.log('Example app listening on port 3005!')
+  console.log('Example app running!')
 })
